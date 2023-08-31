@@ -4,7 +4,7 @@ const arr = [1, 2, 3, 4, 5, 6, 7];
 const arr2 = [1, [2, 3, [4, 5, 6], 7], [8, 9]];
 
 // Q1-1. arr에서 3출력 (Hint:인덱싱은 0부터 시작!)
-console.log(arr.indexof(2));
+console.log(arr[2]);
 
 // Q1-2. arr에서 [1,2,3]출력 (Hint:Array.js에서 slice함수를 사용해볼까요?)
 console.log(arr.slice(0,3));
@@ -56,10 +56,10 @@ console.log(obj.age);
 console.log(obj.gpa.Electronic);
 
 // Q2-3. 김민준의 학생인 박청은의 나이(21)를 obj객체로부터 출력하기 (Hint:obj안에 배열)
-console.log(obj[student][0].age);
+console.log(obj.student[0].age);
 
 // Q2-4. 김민준의 학생인 홍길동이 수강한 강의 중에서 "인간간공학"을 obj객체로부터 출력하기
-console.log(obj[student][1][lecture][1][4]);
+console.log(obj.student[1].lecture[1][4]);
 //정확히 모르셌숩니당..또르르
 
 console.log("======= 문제 구분선 =======");
@@ -101,8 +101,8 @@ console.log("Q4 함수 & 조건문 문제");
 console.log(isLeap(2020));  -> 윤년이 맞습니다.
 console.log(isLeap(2021));  -> 윤년이 아닙니다.
 */
-const input = in_year("년도를 입력해주세요:");
-const year = Number (in_year);
+const input = prompt("년도를 입력해주세요:");  
+const year = Number (input  );
 function isLeap(year){
   if(year % 4 ===0 && year % 400 ===0 || year % 100 !==0){
     return alert("${year}년은 윤년이 맞습니다.");
@@ -175,7 +175,7 @@ console.log("Q7 반복문 연습문제3");
 (Hint:이중for문 활용)
 */
 for(let i=0; i<5; i++){
-  for( let j=0; k<(5-i); j++){
+  for( let j=0; j<(5-i); j++){
     console.log(" ");
   }
   
