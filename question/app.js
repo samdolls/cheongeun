@@ -60,7 +60,7 @@ console.log(obj.student[0].age);
 
 // Q2-4. 김민준의 학생인 홍길동이 수강한 강의 중에서 "인간간공학"을 obj객체로부터 출력하기
 console.log(obj.student[1].lecture[1][4]);
-//정확히 모르셌숩니당..또르르
+//정확히 모르셌숩니당..또르르 asdjfkl;asdlfasdkfalsdfadf
 
 console.log("======= 문제 구분선 =======");
 
