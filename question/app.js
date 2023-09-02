@@ -60,7 +60,7 @@ console.log(obj.student[0].age);
 
 // Q2-4. 김민준의 학생인 홍길동이 수강한 강의 중에서 "인간간공학"을 obj객체로부터 출력하기
 console.log(obj.student[1].lecture[1][4]);
-//정확히 모르셌숩니당..또르르 asdjfkl;asdlfasdkfalsdfadf
+//정확히 모르셌숩니당..또르르
 
 console.log("======= 문제 구분선 =======");
 
@@ -102,16 +102,19 @@ console.log(isLeap(2020));  -> 윤년이 맞습니다.
 console.log(isLeap(2021));  -> 윤년이 아닙니다.
 */
 const input = prompt("년도를 입력해주세요:");  
-const year = Number (input  );
+const year = Number (input);
 function isLeap(year){
-  if(year % 4 ===0 && year % 400 ===0 || year % 100 !==0){
-    return alert("${year}년은 윤년이 맞습니다.");
+  if(year % 4 ===0 && year % 400 ===0){
+    return alert(`${year}년은 윤년이 맞습니다.`);
+  }
+  else if( year % 100 !==0){
+    return alert(`${year}년은 윤년이 아닙니다.`);
   }
   else{
-    return alert("${year}년은 윤년이 아닙니다.");
+    return alert(`${year}년은 윤년이 아닙니다.`);
   }
 }
-
+isLeap();
 
 // console.log(isLeap(2020));  <- 다 풀고 주석 풀어주세요!
 // console.log(isLeap(2021));  <- 다 풀고 주석 풀어주세요!
@@ -131,35 +134,25 @@ console.log("Q5 반복문 연습문제1");
 */
 
 for(let i=0; i<5; i++){
-  for(let j=1; j<=i; j++){
-    console.log("*");
-    }
-    console.log("\n");
+  console.log("*".repeat(i));
 }
+
 console.log("======= 문제 구분선 =======");
 
 // Q6 반복문 연습2
 console.log("Q6 반복문 연습문제2");
 /*
 다음을 출력하시오
-     *
-    **
-   ***
-  ****
-******
+    *
+   **
+  ***
+ ****
+*****
 (Hint:console.log(" ")로 빈칸 표현)
 */
 
 for(let i=0; i<5; i++){
-  for(let j=5; j>0; j--){
-    if(j>i){
-      console.log(" ");
-    }
-    else{
-    console.log("*");
-    }
-  }
-  console.log("\n");
+  console.log(" ".repeat(5-i)+"*".repeat(i))
 }
 console.log("======= 문제 구분선 =======");
 
@@ -174,16 +167,12 @@ console.log("Q7 반복문 연습문제3");
 *********
 (Hint:이중for문 활용)
 */
-for(let i=0; i<5; i++){
-  for( let j=0; j<(5-i); j++){
-    console.log(" ");
+for(let i=1; i<=9; i+=2){
+  for(let j=4; j<=0; j--){
+    console.log(" ".repeat(j)+"*".repeat(i));
   }
-  
-  for (let k=0; k< (2*i+1); k++){
-    console.log("*");
-  }
-  console.log("\n");
 }
+
 console.log("======= 문제 구분선 =======");
 
 // Q8
@@ -201,21 +190,15 @@ console.log("Q8 반복문 연습문제4");
     *
 (Hint:이중for문 활용)
 */
-
-for(let i=0; i<5; i++){
-  for(let a = 0; a < (5 - i); a++){
-    console.log(" ");
+for(let i=1; i<=9; i+=2){
+  for(let j=4; j<=0; j--){
+    console.log(" ".repeat(j)+"*".repeat(i));
   }
-  for(let j = 0; j < (2 * i + 1); j++){
-    console.log("\n");
+
+}
+
+for(let a=7; a<=1; a-=2){
+  for(let b=1; b<=4; b++){
+    console.log(" ".repeat(b)+"*".repeat(a));
   }
 }
-for(let i=0; i<6; i++) {
-  for(let b = 0; b < i; b++) {
-    console.log(" ");
-  }
-  for(let j=0; j<(2 * (5 - i) + 1); j++) {
-    console.log("*");
-    }
-    console.log("\n");
-  }
