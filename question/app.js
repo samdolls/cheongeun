@@ -111,7 +111,7 @@ function isLeap(year){
     return console.log(`${year}년은 윤년이 아닙니다.`);
   }
   else{
-    return aconsole.log(`${year}년은 윤년이 아닙니다.`);
+    return console.log(`${year}년은 윤년이 아닙니다.`);
   }
 
 }
